@@ -3,6 +3,7 @@
 
 # But track these specific files
 !.gitignore
+!README.md
 !mql5_ai_server_v2_3_claude.py
 
 # Ignore sensitive files
