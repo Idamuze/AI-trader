@@ -1,0 +1,20 @@
+# Ignore everything by default
+*
+
+# But track these specific files
+!.gitignore
+!mql5_ai_server_v2_3_claude.py
+
+# Ignore sensitive files
+.env
+*.db
+*.log
+
+# Ignore screenshots and data
+screenshots/
+MQL5/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
