@@ -3,8 +3,8 @@
 //|                                                       Version 2.0|
 //|                                          Multi-Timeframe Analysis|
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2025, Your Company"
-#property link      "https://www.yoursite.com"
+#property copyright "Copyright 2025, Deevi Traders"
+#property link      "https://www.mql5.com/en/users/deevii"
 #property version   "2.00"
 #property strict
 

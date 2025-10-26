@@ -2,14 +2,8 @@
 """
 AI Trading Server - Screenshot Analysis with Claude Vision + Signal Tracking + Breakeven Management
 Receives chart screenshots and tracks signal performance with breakeven stop-loss adjustments
-VERSION 2.3 - TRIGGER SYSTEM FOR CONDITIONAL SETUPS
-Changes in v2.3:
-- Added trigger system for WAIT decisions with next_trigger field
-- Trigger database with automatic expiry and superseding
-- Background watcher thread for trigger evaluation
-- Trigger telemetry endpoints (/triggers_summary, /triggers_pending)
-- Re-analysis when triggers fire
-- Enhanced prompt to generate actionable triggers
+VERSION 2.3
+
 """
 
 import json
@@ -1552,10 +1546,7 @@ def cleanup_old_screenshots():
     except Exception as e:
         logger.error(f"Cleanup error: {str(e)}")
 
-# ====== NEW BREAKEVEN AND HYPOTHETICAL TRACKING ENDPOINTS ======
-
-
-# WEEK 1: Enhanced System Prompt with Multi-Timeframe Analysis
+# Enhanced System Prompt with Multi-Timeframe Analysis
 SYSTEM_PROMPT_MULTI_TIMEFRAME = """
 You are an expert forex trader analyzing multi-timeframe data to identify high-probability setups with clearly defined risk and favorable reward.
 
@@ -1784,7 +1775,7 @@ H4: Ranging 1.0800-1.0850 | H1: Price at 1.0825 (mid-range) | M15: Consolidating
 
 
 # ===========================================================================
-# WEEK 1 ADDITIONS: Enhanced Market Context and Validation
+# Enhanced Market Context and Validation
 # ===========================================================================
 
 def get_enhanced_context(symbol, indicator_data):
@@ -3365,7 +3356,7 @@ def start_trigger_watcher(interval_seconds=120):
     logger.info(f"✅ Trigger watcher thread started (every {interval_seconds}s)")
 
 
-# WEEK 1: Multi-Timeframe Analysis Endpoint
+# Multi-Timeframe Analysis Endpoint
 @app.route('/analyze_multi_timeframe', methods=['POST'])
 def analyze_multi_timeframe():
     """
