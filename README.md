@@ -106,7 +106,7 @@ TELEGRAM_CHAT_ID=your_chat_id
 
 ## License
 
-Private - Not for redistribution
+See LICENSE for details.
 
 ## Disclaimer
 
