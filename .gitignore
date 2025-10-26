@@ -5,6 +5,8 @@
 !.gitignore
 !README.md
 !mql5_ai_server_v2_3_claude.py
+!Price server.mq5
+!AI analysis v2.0.mq5
 
 # Ignore sensitive files
 .env
